@@ -6,5 +6,19 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "dteqtive",
+    author: "David Kazaryan",
+  },
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `src/`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
 }
